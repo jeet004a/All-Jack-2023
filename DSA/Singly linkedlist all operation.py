@@ -12,6 +12,19 @@ class head:
         while a is not None:
             print(a.data,end="->")
             a=a.next
+    # Insert at end
+    def atend(self,data):
+        x=Node(data)
+        if self.head is None:
+            self.head=x
+            return
+        a=self.head
+        while a.next is not None:
+            a=a.next
+        a.next=x
+        
+
+        
 
 a=head()
 a.head=Node(10)
@@ -20,4 +33,9 @@ c=Node(30)
 
 a.head.next=b
 b.next=c
+a.printlist()
+#Insert at end
+print()
+a.atend(90)
+
 a.printlist()
