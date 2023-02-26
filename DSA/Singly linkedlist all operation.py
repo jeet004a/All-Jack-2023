@@ -27,8 +27,17 @@ class head:
         p=Node(data)
         p.next=self.head
         self.head=p
-        
-
+    # Insert at Position
+    def pos(self,data,p):
+        a=Node(data)
+        p=p-1
+        s=self.head
+        c=0
+        while c!=p:
+            s=s.next
+            c=c+1
+        a.next=s.next
+        s.next=a
         
 
 a=head()
@@ -47,4 +56,8 @@ a.printlist()
 # Insert at first
 print()
 a.atfirst(20)
+a.printlist()
+#insert at position
+print()
+a.pos(23,3)
 a.printlist()
