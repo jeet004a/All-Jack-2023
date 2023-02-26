@@ -22,6 +22,11 @@ class head:
         while a.next is not None:
             a=a.next
         a.next=x
+    # Insert beginning
+    def atfirst(self,data):
+        p=Node(data)
+        p.next=self.head
+        self.head=p
         
 
         
@@ -38,4 +43,8 @@ a.printlist()
 print()
 a.atend(90)
 
+a.printlist()
+# Insert at first
+print()
+a.atfirst(20)
 a.printlist()
