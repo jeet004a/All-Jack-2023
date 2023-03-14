@@ -27,7 +27,7 @@ class linklist:
         while b.next is not None:
             b=b.next
         b.next=a
-
+  
     def printlist(self):
         a=self.head
         while a is not None:
